@@ -1261,8 +1261,8 @@ MonoBehaviour:
   dashboardUIController: {fileID: 13948068}
   errorUIController: {fileID: 1253592803}
   errorText: {fileID: 773268878}
-  pumpToggle: {fileID: 1151947024}
-  ledToggle: {fileID: 1030056384}
+  pumpToggle: {fileID: 1030056386}
+  ledToggle: {fileID: 1151947026}
   humidityController: {fileID: 651507388}
   temperatureController: {fileID: 1815425160}
   autoTest: 1
@@ -1569,21 +1569,15 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1625399444970251764, guid: ac3e432dbbc921f4f8a12e70291e5358, type: 3}
   m_PrefabInstance: {fileID: 657098606}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &657098608 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1625399444970251763, guid: ac3e432dbbc921f4f8a12e70291e5358, type: 3}
+--- !u!114 &657098610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1625399444970251765, guid: ac3e432dbbc921f4f8a12e70291e5358, type: 3}
   m_PrefabInstance: {fileID: 657098606}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &657098609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657098608}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 155aec55c1741a64f9c4c56e2c7c760a, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &772890784
@@ -2203,6 +2197,7 @@ GameObject:
   - component: {fileID: 1030056385}
   - component: {fileID: 1030056384}
   - component: {fileID: 1030056387}
+  - component: {fileID: 1030056386}
   m_Layer: 5
   m_Name: LED_Toggle
   m_TagString: Untagged
@@ -2277,19 +2272,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 657098609}
-        m_TargetAssemblyTypeName: SliderToggle, Assembly-CSharp
-        m_MethodName: SetEnable
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1030056384}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
   m_IsOn: 0
 --- !u!114 &1030056385
 MonoBehaviour:
@@ -2317,6 +2300,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1030056386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030056382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155aec55c1741a64f9c4c56e2c7c760a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  toggle: {fileID: 1030056384}
+  slider: {fileID: 657098610}
 --- !u!222 &1030056387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2337,6 +2337,7 @@ GameObject:
   - component: {fileID: 1151947025}
   - component: {fileID: 1151947024}
   - component: {fileID: 1151947023}
+  - component: {fileID: 1151947026}
   m_Layer: 5
   m_Name: Pump_Toggle
   m_TagString: Untagged
@@ -2419,19 +2420,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280604999}
-        m_TargetAssemblyTypeName: SliderToggle, Assembly-CSharp
-        m_MethodName: SetEnable
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1151947024}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
   m_IsOn: 0
 --- !u!114 &1151947025
 MonoBehaviour:
@@ -2459,6 +2448,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1151947026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151947021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155aec55c1741a64f9c4c56e2c7c760a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  toggle: {fileID: 1151947024}
+  slider: {fileID: 1280605000}
 --- !u!1 &1166518883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,21 +3064,15 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1625399444970251764, guid: ac3e432dbbc921f4f8a12e70291e5358, type: 3}
   m_PrefabInstance: {fileID: 1280604996}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1280604998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1625399444970251763, guid: ac3e432dbbc921f4f8a12e70291e5358, type: 3}
+--- !u!114 &1280605000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1625399444970251765, guid: ac3e432dbbc921f4f8a12e70291e5358, type: 3}
   m_PrefabInstance: {fileID: 1280604996}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1280604999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280604998}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 155aec55c1741a64f9c4c56e2c7c760a, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1365840315

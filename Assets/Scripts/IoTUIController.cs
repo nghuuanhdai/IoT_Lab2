@@ -39,7 +39,7 @@ public class IoTUIController : M2MqttUnityClient
     [SerializeField] private CanvasGroupUIController dashboardUIController;
     [SerializeField] private CanvasGroupUIController errorUIController; 
     [SerializeField] private Text errorText;
-    [SerializeField] private Toggle pumpToggle, ledToggle;
+    [SerializeField] private SliderToggle pumpToggle, ledToggle;
     [SerializeField] private GaugeController humidityController, temperatureController;
     [SerializeField] private bool autoTest = true;
 
@@ -160,13 +160,13 @@ public class IoTUIController : M2MqttUnityClient
     private void ProcessPumpTopic(string msg)
     {
         var pumpStatus = JsonUtility.FromJson<OnOffDeviceStatus>(msg);
-        mainThreadQueue.Enqueue(()=> pumpToggle.isOn = pumpStatus.isOn);
+        mainThreadQueue.Enqueue(()=> pumpToggle.SetToggleIsOnDontNotify(pumpStatus.isOn));
     }
 
     private void ProcessLedTopic(string msg)
     {
         var ledStatus = JsonUtility.FromJson<OnOffDeviceStatus>(msg);
-        mainThreadQueue.Enqueue(()=> ledToggle.isOn = ledStatus.isOn);
+        mainThreadQueue.Enqueue(()=> ledToggle.SetToggleIsOnDontNotify(ledStatus.isOn));
     }
 
     private void ProcessStatusTopic(string msg)
